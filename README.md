@@ -1,80 +1,60 @@
-# Academic Project Page Template
+# FACT: A Simple and Efficient Framework for Active Finetuning
 
-> **Update (September 2025)**: This template has been modernized with better design, SEO, and mobile support. For the original version, see the [original-version branch](https://github.com/eliahuhorwitz/Academic-project-page-template/tree/original-version).
+> **IEEE Transactions on Image Processing (TIP), 2026**
+>
+> [Wenshuai Xu](https://vincentxu521.github.io), You Song, Yuzhuo Cui, Minjie Ren, Qingjie Liu, Zhenghui Hu
+>
+> Beihang University (BUAA)
 
-A clean, responsive template for academic project pages.
+This is the project page for our paper **"FACT: A Simple and Efficient Framework for Active Finetuning"**, accepted by IEEE Transactions on Image Processing (TIP).
 
+## Overview
 
-Example project pages built using this template are:
-- https://horwitz.ai/probex
-- https://vision.huji.ac.il/probegen
-- https://horwitz.ai/mother
-- https://horwitz.ai/spectral_detuning
-- https://vision.huji.ac.il/ladeda
-- https://vision.huji.ac.il/dsire
-- https://horwitz.ai/podd
-- https://dreamix-video-editing.github.io
-- https://horwitz.ai/conffusion
-- https://horwitz.ai/3d_ads/
-- https://vision.huji.ac.il/ssrl_ad
-- https://vision.huji.ac.il/deepsim
+Active finetuning aims to improve a pretrained model's performance on a target task by finetuning it with carefully selected informative or challenging data. However, existing methods typically apply standard finetuning strategies (e.g., Full Finetuning, Linear Probing) without considering the unique challenges of the active learning setting — namely, distribution shift and limited labeled data.
 
+We formally define the **FiAF** (*Finetuning in Active Finetuning*) task and propose **FACT** (*Finetuning in ACTive finetuning*), a three-phase hierarchical framework that addresses these challenges through:
 
+1. **Linear Probing (LP)** — Warm-start the model via frozen-feature classification
+2. **Full Finetuning (FF)** — Unlock all parameters to capture task-specific representations
+3. **Lightweight Model (LM)** — Train a compact head with frozen-feature augmentation (FroFA) to mitigate overfitting
 
-## Start using the template
-To start using the template click on `Use this Template`.
+## Key Contributions
 
-The template uses html for controlling the content and css for controlling the style. 
-To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
+- **FiAF Task**: Formal recognition that finetuning in active finetuning fundamentally differs from traditional finetuning due to distribution shift and limited labeled data
+- **FACT Framework**: A three-phase hierarchical approach (LP -> FF -> LM) with frozen feature augmentation, achieving state-of-the-art performance
+- **Backbone Evaluation**: Comprehensive comparison across ConvNeXt, ViT-S, ViT-B, and Vision LSTM architectures
+- **Extensive Experiments**: Evaluation on classic (CIFAR10/100, ImageNet-1k), long-tail (CIFAR10-LT/100-LT), and fine-grained (StanfordCars, FGVCAircraft) benchmarks
 
-**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
+## Project Page
 
-## What's New
+Visit the live project page: [https://vincentxu521.github.io/TIP_FACT_Project_Page/](https://vincentxu521.github.io/TIP_FACT_Project_Page/)
 
-- Modern, clean design with better mobile support
-- Improved SEO with proper meta tags and structured data
-- Performance improvements (lazy loading, optimized assets)
-- More Works dropdown
-- Copy button for BibTeX citations
-- Better accessibility
+The project page includes:
+- Paper overview and abstract
+- FiAF task motivation and illustration
+- FACT framework description with architecture diagram
+- Experimental results carousel (Figure 3, Tables 1-6)
+- Author information
+- BibTeX citation with one-click copy
 
-## Components
+## Paper
 
-- Teaser video
-- Image carousel
-- YouTube video embedding
-- Video carousel
-- PDF poster viewer
-- BibTeX citation
+- **arXiv**: [2606.02079](https://arxiv.org/abs/2606.02079)
 
-## Customization
+## BibTeX
 
-The HTML file has TODO comments showing what to replace:
+```bibtex
+@misc{xu2026fact_TIP,
+  title   = {FACT: A Simple and Efficient Framework for Active Finetuning},
+  author  = {Wenshuai Xu and You Song and Yuzhuo Cui and Minjie Ren and Qingjie Liu and Zhenghui Hu},
+  year    = {2026},
+  eprint  = {2606.02079},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url     = {https://arxiv.org/abs/2606.02079},
+}
+```
 
-- Paper title, authors, institution, conference
-- Links (arXiv, GitHub, etc.)
-- Abstract and descriptions  
-- Videos, images, and PDFs
-- Related works in the dropdown
-- Meta tags for SEO and social sharing
+## License
 
-### Meta Tags
-The template includes meta tags for better search engine visibility and social media sharing. These appear in the `<head>` section and help with:
-- Google Scholar indexing
-- Social media previews (Twitter, Facebook, LinkedIn)
-- Search engine optimization
-
-Create a 1200x630px social preview image at `static/images/social_preview.png`.
-
-## Tips
-
-- Compress images with [TinyPNG](https://tinypng.com)
-- Use YouTube for large videos (>10MB)  
-- Replace the favicon in `static/images/`
-- Works with GitHub Pages
-
-## Acknowledgments
-Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
-
-## Website License
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+This project page is built using the [Academic Project Page Template](https://github.com/eliahuhorwitz/Academic-project-page-template). The template is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
